@@ -1,14 +1,9 @@
-function setup() {
-    createCanvas(400, 400);
-    background("white")
-  }
-  
-  function draw() {
-    stroke("blue");
-    fill("red");
-    
-    
-    if (mouseIsPressed) {
-      rect(mouseX, mouseY, 20, 35);
-    }
-  }
+function openModal(title, description) {
+  document.getElementById('modal-title').innerText = title;
+  document.getElementById('modal-description').innerText = description;
+  document.getElementById('modal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
